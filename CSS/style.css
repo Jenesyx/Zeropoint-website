@@ -1,0 +1,46 @@
+/* Import reset.css */
+@import "../CSS/reset.css";
+
+/* Fonts */
+@font-face {
+    font-family: Roboto;
+    src: url(../Fonts/Roboto-Regular.ttf);
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: RobotoMedium;
+    src: url(../Fonts/Roboto-Medium.ttf);
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url(../Fonts/Roboto-Bold.ttf);
+    font-weight: normal;
+    font-display: swap;
+}
+
+/* Colors */
+:root {
+    --main-green: #026667;
+    --main-blue: #222;
+    --trim-color: #333;
+    --text-color: #eee;
+}
+
+/* General */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    font-family: Roboto;
+    direction: ltr;
+    background: #063b5f;
+}
