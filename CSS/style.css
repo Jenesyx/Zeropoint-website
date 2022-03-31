@@ -23,12 +23,20 @@
     font-display: swap;
 }
 
+/* Clear */
+.clear {
+    clear: both;
+}
+
 /* Colors */
 :root {
     --main-green: #026667;
+    --dark-green: #0D5457;
+    --light-blue: #7DFEFF;
     --main-blue: #222;
     --trim-color: #333;
     --text-color: #eee;
+    --text-dark: #7E7E7E;
 }
 
 /* General */
@@ -42,5 +50,127 @@
 body{
     font-family: Roboto;
     direction: ltr;
-    background: #063b5f;
+    background: linear-gradient(to top, #25262E, #026667);
+}
+
+.container {
+    width: 1500px;
+    margin: auto;
+}
+
+/* Header */ 
+header {
+    width: 100%;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    background-color: var(--main-green);
+    box-shadow: 0 3px 15px 1px #000000;
+}
+
+header #nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+header #nav .logo {
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #nav .logo img {
+    width: 75px;
+}
+
+header #nav ul {
+    margin-left: 50px;
+    display: flex;
+    list-style: none;
+}
+
+header #nav ul li {
+    margin-right: 30px;
+}
+
+header #nav ul li a {
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.14rem solid rgba(0,0,0,0);
+    color: var(--text-dark);
+    font-size: 19px;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+header #nav ul li a:hover {
+    color: var(--light-blue);
+    text-shadow: 0 0 2px var(--light-blue);
+
+}
+
+header #nav ul li a svg {
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+header #nav ul li a.active {
+    color: var(--text-color);
+    text-shadow: 0 0 3px rgba(0,0,0,0.6);
+    border-bottom: 0.15rem solid var(--text-color);
+}
+
+/* Progressbar */
+header .progress {
+    width: 100%;
+    height: 5px;
+    background-color: var(--dark-green);
+}
+
+header .progress .progress-bar {
+    width: 0;
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+    background: var(--text-color);
+    -webkit-border-radius: 0 15px 15px 0;
+    -moz-border-radius: 0 15px 15px 0;
+    -ms-border-radius: 0 15px 15px 0;
+    -o-border-radius: 0 15px 15px 0;
+}
+
+
+/* General Sections style */
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--text-color);
+}
+
+
+/* Sections */
+#welcomer-holder {
+    background-color: red;
+}
+
+#nfts-holder {
+    background-color: yellow;
+}
+
+#aboutus-holder{
+    background-color: blue;
+}
+
+#shop-holder {
+    background-color: green;
 }
