@@ -33,24 +33,29 @@
     --main-green: #026667;
     --dark-green: #0D5457;
     --light-blue: #7DFEFF;
-    --main-blue: #222;
+    --main-blue: #00BFC1;
+    --main-black: #222;
+    --second-dark: #25262E;
     --trim-color: #333;
     --text-color: #eee;
     --text-dark: #7E7E7E;
+    --full-dark: #000;
 }
 
 /* General */
 *{
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
     outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body{
     font-family: Roboto;
     direction: ltr;
-    background: linear-gradient(to top, #25262E, #026667);
+    background: linear-gradient(to top, var(--second-dark), var(--main-green));
 }
 
 .container {
@@ -60,39 +65,49 @@ body{
 
 /* Header */ 
 header {
-    width: 100%;
     height: 80px;
     position: sticky;
     top: 0;
     background-color: var(--main-green);
-    box-shadow: 0 3px 15px 1px #000000;
+    box-shadow: 0 1px 20px 0 var(--full-dark);
+}
+
+header .container{
+    width: 80%;
+    margin: 0 auto;
 }
 
 header #nav {
+    /* background-color: blue; */
+    margin: 0 auto;
     display: flex;
     width: 100%;
+    height: 80px;
     align-items: center;
 }
 
 header #nav .logo {
-    width: 8%;
+    width: 6%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 header #nav .logo img {
-    width: 75px;
+    width: 90px;
 }
 
 header #nav ul {
-    margin-left: 50px;
+    margin-left: 60px;
     display: flex;
     list-style: none;
+    justify-content: center;
+    align-items: center;
 }
 
 header #nav ul li {
-    margin-right: 30px;
+    margin-right: 50px;
 }
 
 header #nav ul li a {
@@ -160,17 +175,27 @@ section{
 
 /* Sections */
 #welcomer-holder {
-    background-color: red;
+    background-image: url('../Images/mainpattern2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
 }
 
 #nfts-holder {
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 #aboutus-holder{
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 #shop-holder {
-    background-color: green;
+    /* background-color: green; */
+}
+
+@media screen and (max-width: 1540px){
+    .container {
+        width: 1100px;
+    }
 }
