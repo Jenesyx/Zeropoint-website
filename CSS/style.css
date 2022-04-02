@@ -6,7 +6,7 @@
     font-family: Roboto;
     src: url(../Fonts/Roboto-Regular.ttf);
     font-weight: normal;
-    font-display: swap;
+    font-display: swap; 
 }
 
 @font-face {
@@ -66,15 +66,35 @@ body{
 /* Header */ 
 header {
     height: 80px;
-    position: sticky;
+    position: relative;
     top: 0;
     background-color: var(--main-green);
     box-shadow: 0 1px 20px 0 var(--full-dark);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 header .container{
     width: 80%;
     margin: 0 auto;
+}
+
+header.sticky {
+    position: sticky;
+    top: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 header #nav {
@@ -117,6 +137,7 @@ header #nav ul li a {
     color: var(--text-dark);
     font-size: 19px;
     text-decoration: none;
+    position: relative;
     padding: 5px 15px;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -124,6 +145,40 @@ header #nav ul li a {
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
 }
+
+li#nav > a,
+li > a:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+li > a:after {
+  content: '';
+  position: absolute;
+  top: 1.74em;
+  left: 0;
+  width: 100%;
+  height: 0.15rem;
+  transform: scaleX(0);
+  background-color: var(--text-color);
+  opacity: 0.9;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+}
+
+
+li#nav > a:after,
+li > a.active::after {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+}
+
 
 header #nav ul li a:hover {
     color: var(--light-blue);
@@ -139,7 +194,6 @@ header #nav ul li a svg {
 header #nav ul li a.active {
     color: var(--text-color);
     text-shadow: 0 0 3px rgba(0,0,0,0.6);
-    border-bottom: 0.15rem solid var(--text-color);
 }
 
 /* Progressbar */
@@ -179,7 +233,24 @@ section{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
 
+#welcomer-holder .title-holder{
+    width: 90%;
+    height: 90%
+    backgrou
+}
+
+#welcomer-holder  .title {
+    font-family: RobotoMedium;
+    color: #fff;
+    position: absolute;
+    top: 310px;
+    left: 15%;
+    font-size: 90px;
+    text-shadow: #000000 2px 2px 4px;
+} .title:hover {
+    cursor: default;
 }
 
 #nfts-holder {
