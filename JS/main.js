@@ -1,12 +1,40 @@
 const sections = document.querySelectorAll('section');
 const a = document.querySelectorAll('.container nav ul li a');
 const progress = document.querySelector('.progress-bar');
+const welcomer = document.getElementById('welcomer-holder')
+const textHolder = document.querySelector('.title-holder')
 let current;
-let header  = document.querySelector('header')
-let sticky = header.offsetHeight * 4.85
 
+// Load Animation
+(function(){
+    const items = document.querySelectorAll('')
 
-function onload(){
+    function IsElementInViewPort(el){
+        let rect = el.getBoundingClientRect()
+
+        return(
+            rect.top >= 0 &&
+            rect.right >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.left <= (window.innerWidth || document.documentElement.clientWidth) 
+        );
+    }
+    //!!!!!!!!!!! Most change this !!!!!!!!!!!//
+    function callBackFunction(){
+        for (let i = 0; i < items.length; i++) {
+            if(IsElementInViewPort(items[i])){
+                items[i].classList.add('in-view')
+            }
+        }
+    }
+
+    window.addEventListener('scroll', callBackFunction)
+    window.addEventListener('load', callBackFunction)
+    
+})()
+
+// Window load
+window.onload = function(e){
     var typed = new Typed('#typing', {
         strings:
             [
@@ -19,18 +47,12 @@ function onload(){
         startDelay: 2200,
         backSpeed: 60
     });
+
+    textHolder.classList.add('active')
 }
 
+// Window scroll
 window.addEventListener('scroll', ()=>{
-    if (window.pageYOffset > sticky)
-    {
-        header.classList.add('sticky');
-    }
-
-    else
-    {
-        header.classList.remove('sticky');
-    }
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
