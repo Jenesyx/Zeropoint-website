@@ -6,7 +6,7 @@
     font-family: Roboto;
     src: url(../Fonts/Roboto-Regular.ttf);
     font-weight: normal;
-    font-display: swap; 
+    font-display: swap;
 }
 
 @font-face {
@@ -32,6 +32,7 @@
 :root {
     --main-green: #026667;
     --dark-green: #0D5457;
+    --light-green: #00888A;
     --light-blue: #7DFEFF;
     --main-blue: #00BFC1;
     --main-black: #222;
@@ -43,7 +44,7 @@
 }
 
 /* General */
-*{
+* {
     box-sizing: border-box;
     outline: none;
 }
@@ -52,7 +53,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: Roboto;
     direction: ltr;
     background: linear-gradient(to top, var(--second-dark), var(--main-green));
@@ -63,17 +64,17 @@ body{
     margin: auto;
 }
 
-/* Header */ 
+/* Header */
 header {
-    height: 80px;
+    height: 70px;
     position: sticky;
     top: 0;
     background-color: var(--main-green);
     box-shadow: 0 1px 20px 0 var(--full-dark);
-    z-index: 1;
+    z-index: 69;
 }
 
-header .container{
+header .container {
     margin: 0 auto;
     height: 100%;
 }
@@ -114,7 +115,7 @@ header #nav ul li {
 header #nav ul li a {
     align-items: center;
     justify-content: center;
-    border-bottom: 0.14rem solid rgba(0,0,0,0);
+    border-bottom: 0.14rem solid rgba(0, 0, 0, 0);
     color: var(--text-dark);
     font-size: 19px;
     text-decoration: none;
@@ -128,37 +129,37 @@ header #nav ul li a {
 }
 
 /* a border-bottom animation */
-li#nav > a,
-li > a:hover {
-  background-color: transparent;
-  color: #fff;
+li#nav>a,
+li>a:hover {
+    background-color: transparent;
+    color: #fff;
 }
 
-li > a:after {
-  content: '';
-  position: absolute;
-  top: 1.74em;
-  left: 0;
-  width: 100%;
-  height: 0.15rem;
-  transform: scaleX(0);
-  background-color: var(--text-color);
-  opacity: 0.9;
-  transition: all .2s ease-in-out;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
+li>a:after {
+    content: '';
+    position: absolute;
+    top: 1.74em;
+    left: 0;
+    width: 100%;
+    height: 0.15rem;
+    transform: scaleX(0);
+    background-color: var(--text-color);
+    opacity: 0.9;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
 }
 
 
-li#nav > a:after,
-li > a.active::after {
-  transform: scaleX(1);
-  -webkit-transform: scaleX(1);
-  -moz-transform: scaleX(1);
-  -ms-transform: scaleX(1);
-  -o-transform: scaleX(1);
+li#nav>a:after,
+li>a.active::after {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
 }
 
 header #nav ul li a:hover {
@@ -174,7 +175,7 @@ header #nav ul li a svg {
 
 header #nav ul li a.active {
     color: var(--text-color);
-    text-shadow: 0 0 3px rgba(0,0,0,0.6);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
 }
 
 /* Progressbar */
@@ -197,13 +198,12 @@ header .progress .progress-bar {
 
 
 /* General Sections style */
-section{
+section {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
     color: var(--text-color);
 }
 
@@ -218,9 +218,9 @@ section{
     background-attachment: fixed;
 }
 
-#welcomer-holder .title-holder{
+#welcomer-holder .title-holder {
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 16%;
     transform: translateX(-550px) rotate(180deg);
     -webkit-transform: translateX(-550px) rotate(180deg);
@@ -246,21 +246,19 @@ section{
     -o-transform: translateX(0) rotate(0);
 }
 
-#welcomer-holder .title-holder{
-    position: absolute;
-    top: 35%;
-    left: 16%;
-}
-
 #welcomer-holder .title {
     font-family: RobotoMedium;
     color: #fff;
     position: relative;
     font-size: 90px;
     text-shadow: #000000 2px 2px 4px;
-} .title:hover {
+}
+
+.title:hover {
     cursor: default;
-} #welcomer-holder .title::after {
+}
+
+#welcomer-holder .title::after {
     content: '';
     position: absolute;
     top: 0;
@@ -269,19 +267,176 @@ section{
     width: 100%;
 }
 
+/* NFT's Section */
 #nfts-holder {
-    /* background-color: yellow; */
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    position: relative;
 }
 
-#aboutus-holder{
+#nfts-holder .container {
+    position: relative;
+}
+
+/* Image One */
+#nfts-holder .img-holder-1 {
+    z-index: 2;
+    position: absolute;
+    right: 341px;
+    top: 220px;
+    transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -o-transform: rotate(25deg);
+}
+
+#nfts-holder .img-holder-1 img {
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    object-fit: cover;
+    width: 333px;
+    height: 333px;
+}
+
+/* Image Two */
+#nfts-holder .img-holder-2 {
+    z-index: 3;
+    position: absolute;
+    right: 200px;
+    top: 500px;
+}
+
+#nfts-holder .img-holder-2 img  {
+    width: 288px;
+    height: 288px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    object-fit: cover;
+}
+
+/* Text Holder */
+#nfts-holder .text-holder {
+    margin: 15% auto;
+    width: 1000px;
+    height: 510px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.066);
+    box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.4);
+    backdrop-filter: blur( 28px );
+    -webkit-backdrop-filter: blur( 28px );
+    border: 1px solid var(--text-color);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+#nfts-holder .text-holder p {
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 25px;
+    width: 38%;    
+    text-shadow: 3px 3px 5px 99px rgb(0, 0, 0);
+    position: absolute;
+    left: 70px;
+    top: 65px;
+}
+
+#nfts-holder .text-holder .nft-btn {
+    position: absolute;
+    bottom: 90px;
+    left: 70px;
+}
+
+/* Button animation */
+#nfts-holder .text-holder .nft-btn a {
+    padding: 11px 29px;
+    background: var(--light-green);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    border: 2px solid rgba(52, 73, 94, 0);
+    color: var(--main-green);
+    font-family: Roboto;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    position: relative;
+} #nfts-holder .text-holder .nft-btn a::before {
+    content: '';
+    position: absolute;
+    background: var(--dark-green);
+    top: 110%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -webkit-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -moz-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -ms-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -o-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    filter: blur(1.6em);
+    -webkit-filter: blur(1.6em);
+    opacity: 0.4;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+} #nfts-holder .text-holder .nft-btn a:hover {
+    color: #fff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.311);
+    background: none;
+    box-shadow: inset 0 0 0.5em 0 var(--light-green), 0 0 0.5em 0 var(--light-green);  
+    border: 2px solid var(--light-green);
+} #nfts-holder .text-holder .nft-btn a:hover::before {
+    content: '';
+    position: absolute;
+    background: var(--light-green);
+    top: 110%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -webkit-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -moz-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -ms-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -o-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    filter: blur(1.6em);
+    -webkit-filter: blur(1.6em);
+    opacity: .9;
+}
+
+/* About us Holder */
+#aboutus-holder {
     /* background-color: blue; */
 }
 
+
+/* Shop Holder */
 #shop-holder {
     /* background-color: green; */
 }
 
-@media screen and (max-width: 1540px){
+
+/* Media screen 1540 - laptop 17inch */
+@media screen and (max-width: 1540px) {
     .container {
         width: 1100px;
     }

@@ -6,39 +6,39 @@ const textHolder = document.querySelector('.title-holder')
 let current;
 
 // Load Animation
-(function(){
-    const items = document.querySelectorAll('')
+// (function(){
+//     const items = document.querySelectorAll('')
 
-    function IsElementInViewPort(el){
-        let rect = el.getBoundingClientRect()
+//     function IsElementInViewPort(el){
+//         let rect = el.getBoundingClientRect()
 
-        return(
-            rect.top >= 0 &&
-            rect.right >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.left <= (window.innerWidth || document.documentElement.clientWidth) 
-        );
-    }
-    //!!!!!!!!!!! Most change this !!!!!!!!!!!//
-    function callBackFunction(){
-        for (let i = 0; i < items.length; i++) {
-            if(IsElementInViewPort(items[i])){
-                items[i].classList.add('in-view')
-            }
-        }
-    }
+//         return(
+//             rect.top >= 0 &&
+//             rect.right >= 0 &&
+//             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//             rect.left <= (window.innerWidth || document.documentElement.clientWidth) 
+//         );
+//     }
+//     //!!!!!!!!!!! Most change this !!!!!!!!!!!//
+//     function callBackFunction(){
+//         for (let i = 0; i < items.length; i++) {
+//             if(IsElementInViewPort(items[i])){
+//                 items[i].classList.add('in-view')
+//             }
+//         }
+//     }
 
-    window.addEventListener('scroll', callBackFunction)
-    window.addEventListener('load', callBackFunction)
+//     window.addEventListener('scroll', callBackFunction)
+//     window.addEventListener('load', callBackFunction)
     
-})()
+// })()
 
 // Window load
 window.onload = function(e){
     var typed = new Typed('#typing', {
         strings:
             [
-                "are Zeropoint", "make it", "fix it",
+                "are ZeroPoint", "make it", "fix it",
                 "build it", "take it",
                 "are your family"
             ],
