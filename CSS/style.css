@@ -329,7 +329,7 @@ section {
     width: 1000px;
     height: 510px;
     position: relative;
-    background: rgba(255, 255, 255, 0.066);
+    background: rgba(255, 255, 255, 0.1);
     box-shadow: 2px 2px 20px 0px rgba(0,0,0,0.4);
     backdrop-filter: blur( 28px );
     -webkit-backdrop-filter: blur( 28px );
@@ -425,7 +425,187 @@ section {
 
 /* About us Holder */
 #aboutus-holder {
+    align-items: center;
+    margin: auto;
+    display: flex;
+    /* background-color: red; */
+    position: relative;
+}
+
+#aboutus-holder .container {
+    /* background-color: purple; */
+    justify-content: space-between;
+    display: flex;
+    height: 100%;
+}
+
+/* Left Section */
+#aboutus-holder .Bubbles {
     /* background-color: blue; */
+    width: 40%;
+}
+
+#aboutus-holder .Bubbles ul {
+    margin-top: 220px;
+    list-style: none;
+    justify-content: center;
+}
+
+#aboutus-holder .Bubbles ul li {
+    margin-top: 170px;
+}
+
+/* The Bubbles */
+#aboutus-holder .Bubbles ul li {
+    text-decoration: none;
+    color: var(--text-color);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    font-family: Roboto;
+    font-size: 27px;
+    justify-content: center;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.15);
+    box-shadow: 3px 3px 30px 0 rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+#aboutus-holder .Bubbles ul li svg {
+    font-size: 30px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    filter: none;
+    -webkit-filter: none;
+}
+
+#aboutus-holder .Bubbles ul li span {
+    color: red;
+    display: none;
+}
+
+#aboutus-holder .Bubbles ul li:hover {
+    cursor: pointer;
+    width: 85px;
+    height: 85px;
+}
+
+/* SVG Rotate Animation */
+#aboutus-holder .Bubbles ul li:hover svg {
+    animation: Rotate 3.5s infinite;
+    -webkit-animation: Rotate 3.5s infinite;
+    filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.5));
+    -webkit-filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.5));
+}
+
+@keyframes Rotate {
+    0% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+    25% {
+        transform: rotate(0);
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+    }
+    50% {
+        transform: rotate(25deg);
+        -webkit-transform: rotate(25deg);
+        -moz-transform: rotate(25deg);
+        -ms-transform: rotate(25deg);
+        -o-transform: rotate(25deg);
+    }
+    75% {
+        transform: rotate(-25deg);
+        -webkit-transform: rotate(-25deg);
+        -moz-transform: rotate(-25deg);
+        -ms-transform: rotate(-25deg);
+        -o-transform: rotate(-25deg);
+    }
+    100% {
+        transform: rotate(25deg);
+        -webkit-transform: rotate(25deg);
+        -moz-transform: rotate(25deg);
+        -ms-transform: rotate(25deg);
+        -o-transform: rotate(25deg);
+    }
+}
+
+/* cursor: pointer;
+width: 230px;
+height: 75px;
+border-radius: 20px;
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+-ms-border-radius: 20px;
+-o-border-radius: 20px;
+justify-content: center;
+align-items: center; */
+
+
+/* Right Section */
+#aboutus-holder .main-text-holder {
+    width: 55%;
+    height: 100%;
+}
+
+#aboutus-holder .main-text-holder .text-holder {
+    position: relative;
+    margin: 170px auto;
+    width: 67%;
+    height: 72%;
+    background: rgba( 255, 255, 255, 0.12);
+    box-shadow: 3px 3px 30px 0 rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+#aboutus-holder .main-text-holder .text-holder div {
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    width: 85%;
+    /* background-color: red; */
+    height: 85%;
+}
+
+#aboutus-holder .main-text-holder .text-holder div h3 {
+    font-size: 25px;
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+#aboutus-holder .main-text-holder .text-holder div p {
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: Roboto;
+    line-height: 26px;
 }
 
 
@@ -439,5 +619,13 @@ section {
 @media screen and (max-width: 1540px) {
     .container {
         width: 1100px;
+    }
+    #nfts-holder .img-holder-1 {
+        right: 141px;
+        top: 160px;
+    }
+    #nfts-holder .img-holder-2 {
+        right: 20px;
+        top: 430px;
     }
 }
