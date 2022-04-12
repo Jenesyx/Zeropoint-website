@@ -456,14 +456,13 @@ section {
 }
 
 /* The Bubbles */
+/* General Bubbles */
 #aboutus-holder .Bubbles ul li {
     text-decoration: none;
     color: var(--text-color);
     width: 80px;
     height: 80px;
     display: flex;
-    font-family: Roboto;
-    font-size: 27px;
     justify-content: center;
     align-items: center;
     background: rgba( 255, 255, 255, 0.15);
@@ -483,8 +482,21 @@ section {
     -o-transition: all 0.4s ease-in-out;
 }
 
+#aboutus-holder .Bubbles ul li span {
+    font-size: 25px;
+    position: absolute;
+    left: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
 #aboutus-holder .Bubbles ul li svg {
-    font-size: 30px;
+    font-size: 28px;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -494,15 +506,10 @@ section {
     -webkit-filter: none;
 }
 
-#aboutus-holder .Bubbles ul li span {
-    color: red;
-    display: none;
-}
-
 #aboutus-holder .Bubbles ul li:hover {
     cursor: pointer;
-    width: 85px;
-    height: 85px;
+    width: 82px;
+    height: 82px;
 }
 
 /* SVG Rotate Animation */
@@ -511,6 +518,103 @@ section {
     -webkit-animation: Rotate 3.5s infinite;
     filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.5));
     -webkit-filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.5));
+}
+
+
+/* About Us Bubble */
+#aboutus-holder .Bubbles ul #aboutus-bubble {
+    justify-content: left;
+    width: 250px;
+    height: 75px;
+    box-shadow: inset 50px 0px 70px -25px rgba(0,191,193,0.95);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#aboutus-holder .Bubbles ul #aboutus-bubble svg {
+    margin-left: 30px;
+    font-size: 35px;
+}
+
+#aboutus-holder .Bubbles ul #aboutus-bubble span {
+    margin-left: 30px;
+    left: 70px;
+    visibility: visible;
+    opacity: 1;
+    transition: all 2s ease-in-out;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -ms-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+}
+
+#aboutus-holder .Bubbles ul #aboutus-bubble.active {
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+#aboutus-holder .Bubbles ul #aboutus-bubble.active span {
+    left: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+
+#aboutus-holder .Bubbles ul #aboutus-bubble.active svg {
+    margin-left: 0;
+    font-size: 28px;
+}
+
+/* Road Map Section */
+#aboutus-holder .Bubbles ul #roadmap-bubble.active {
+    justify-content: left;
+    width: 250px;
+    height: 75px;
+    box-shadow: inset 50px 0px 70px -25px rgba(0,191,193,0.95);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#aboutus-holder .Bubbles ul #roadmap-bubble.active span {
+    margin-left: 30px;
+    left: 70px;
+    visibility: visible;
+    opacity: 1;
+    transition: all 2s ease;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    -o-transition: all 2s ease;
+}
+
+
+
+#aboutus-holder .Bubbles ul #roadmap-bubble.active svg {
+    margin-left: 30px;
+    font-size: 35px;
 }
 
 @keyframes Rotate {
@@ -586,12 +690,12 @@ align-items: center; */
     -o-border-radius: 50px;
 }
 
+/* General Right Section Style */
 #aboutus-holder .main-text-holder .text-holder div {
     position: absolute;
     top: 7%;
     left: 7%;
     width: 85%;
-    /* background-color: red; */
     height: 85%;
 }
 
@@ -608,12 +712,24 @@ align-items: center; */
     line-height: 26px;
 }
 
+/* 3 Section text */
+/* About us */
+#aboutus-holder .main-text-holder .text-holder .aboutus-text {
+    display: block;
+}
+/* Road Map */
+#aboutus-holder .main-text-holder .text-holder .roadmap-text {
+    
+}
+/* Shop */
+#aboutus-holder .main-text-holder .text-holder .shop-text {
+    
+}
 
 /* Shop Holder */
 #shop-holder {
     /* background-color: green; */
 }
-
 
 /* Media screen 1540 - laptop 17inch */
 @media screen and (max-width: 1540px) {
