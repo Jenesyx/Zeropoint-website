@@ -5,34 +5,6 @@ const welcomer = document.getElementById('welcomer-holder')
 const textHolder = document.querySelector('.title-holder')
 let current;
 
-// Load Animation
-// (function(){
-//     const items = document.querySelectorAll('')
-
-//     function IsElementInViewPort(el){
-//         let rect = el.getBoundingClientRect()
-
-//         return(
-//             rect.top >= 0 &&
-//             rect.right >= 0 &&
-//             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//             rect.left <= (window.innerWidth || document.documentElement.clientWidth) 
-//         );
-//     }
-//     //!!!!!!!!!!! Most change this !!!!!!!!!!!//
-//     function callBackFunction(){
-//         for (let i = 0; i < items.length; i++) {
-//             if(IsElementInViewPort(items[i])){
-//                 items[i].classList.add('in-view')
-//             }
-//         }
-//     }
-
-//     window.addEventListener('scroll', callBackFunction)
-//     window.addEventListener('load', callBackFunction)
-    
-// })()
-
 // Window load
 window.onload = function(e){
     var typed = new Typed('#typing', {
@@ -50,6 +22,38 @@ window.onload = function(e){
 
     textHolder.classList.add('active')
 }
+
+// Texts
+const mainTextHolder = document.querySelector('.text-holder') 
+const aboutUsHolder = document.querySelector('.aboutus-text') 
+const roadMapHolder = document.querySelector('.roadmap-text') 
+const shopHolder = document.querySelector('.shop-text')
+
+// Bubbles
+const aboutUsBubble = document.querySelector('#aboutus-bubble') 
+const roadMapBubble = document.querySelector('#roadmap-bubble')
+const shopBubble = document.querySelector('#shop-bubble') 
+
+// Click Event // Bubbles
+aboutUsBubble.addEventListener('click', function(e){
+    aboutUsBubble.classList.remove('active')
+    setTimeout((e) => {
+        roadMapBubble.classList.remove('active')
+    }, 120);
+})
+
+roadMapBubble.addEventListener('click', function(e){
+    setTimeout((e) => {
+        aboutUsBubble.classList.add('active')
+    }, 120);
+    roadMapBubble.classList.add('active')
+})
+
+shopBubble.addEventListener('click', function(){
+    aboutUsBubble.classList.add('active')
+    roadMapBubble.classList.add('active')
+})
+
 
 // Window scroll
 window.addEventListener('scroll', ()=>{
