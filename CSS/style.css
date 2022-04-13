@@ -152,7 +152,6 @@ li>a:after {
     -o-transition: all .2s ease-in-out;
 }
 
-
 li#nav>a:after,
 li>a.active::after {
     transform: scaleX(1);
@@ -196,7 +195,6 @@ header .progress .progress-bar {
     -o-border-radius: 0 15px 15px 0;
 }
 
-
 /* General Sections style */
 section {
     width: 100%;
@@ -206,7 +204,6 @@ section {
     justify-content: center;
     color: var(--text-color);
 }
-
 
 /*****************************! Sections !******************************/
 
@@ -428,12 +425,10 @@ section {
     align-items: center;
     margin: auto;
     display: flex;
-    /* background-color: red; */
     position: relative;
 }
 
 #aboutus-holder .container {
-    /* background-color: purple; */
     justify-content: space-between;
     display: flex;
     height: 100%;
@@ -441,7 +436,6 @@ section {
 
 /* Left Section */
 #aboutus-holder .Bubbles {
-    /* background-color: blue; */
     width: 40%;
 }
 
@@ -483,9 +477,10 @@ section {
 }
 
 #aboutus-holder .Bubbles ul li span {
+    width: 120px;
     font-size: 25px;
     position: absolute;
-    left: 70px;
+    left: 10px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s ease-in-out;
@@ -544,11 +539,11 @@ section {
     left: 70px;
     visibility: visible;
     opacity: 1;
-    transition: all 2s ease-in-out;
-    -webkit-transition: all 2s ease-in-out;
-    -moz-transition: all 2s ease-in-out;
-    -ms-transition: all 2s ease-in-out;
-    -o-transition: all 2s ease-in-out;
+    transition: all 1.7s ease;
+    -webkit-transition: all 1.7s ease;
+    -moz-transition: all 1.7s ease;
+    -ms-transition: all 1.7s ease;
+    -o-transition: all 1.7s ease;
 }
 
 #aboutus-holder .Bubbles ul #aboutus-bubble.active {
@@ -569,7 +564,7 @@ section {
 }
 
 #aboutus-holder .Bubbles ul #aboutus-bubble.active span {
-    left: 50px;
+    left: 10px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s ease-in-out;
@@ -603,20 +598,49 @@ section {
     left: 70px;
     visibility: visible;
     opacity: 1;
-    transition: all 2s ease;
-    -webkit-transition: all 2s ease;
-    -moz-transition: all 2s ease;
-    -ms-transition: all 2s ease;
-    -o-transition: all 2s ease;
+    transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
 }
-
-
 
 #aboutus-holder .Bubbles ul #roadmap-bubble.active svg {
     margin-left: 30px;
     font-size: 35px;
 }
 
+/* Shop Section */
+#aboutus-holder .Bubbles ul #shop-bubble.active {
+    justify-content: left;
+    width: 250px;
+    height: 75px;
+    box-shadow: inset 50px 0px 70px -25px rgba(0,191,193,0.95);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#aboutus-holder .Bubbles ul #shop-bubble.active span {
+    margin-left: 30px;
+    left: 70px;
+    visibility: visible;
+    opacity: 1;
+    transition: all 1.2s ease;
+    -webkit-transition: all 1.2s ease;
+    -moz-transition: all 1.2s ease;
+    -ms-transition: all 1.2s ease;
+    -o-transition: all 1.2s ease;
+}
+
+#aboutus-holder .Bubbles ul #shop-bubble.active svg {
+    margin-left: 30px;
+    font-size: 35px;
+}
+
+/* Icon Rotate Animation */
 @keyframes Rotate {
     0% {
         transform: rotate(360deg);
@@ -655,22 +679,11 @@ section {
     }
 }
 
-/* cursor: pointer;
-width: 230px;
-height: 75px;
-border-radius: 20px;
--webkit-border-radius: 20px;
--moz-border-radius: 20px;
--ms-border-radius: 20px;
--o-border-radius: 20px;
-justify-content: center;
-align-items: center; */
-
-
 /* Right Section */
 #aboutus-holder .main-text-holder {
     width: 55%;
-    height: 100%;
+    height: 950px;
+    position: relative;
 }
 
 #aboutus-holder .main-text-holder .text-holder {
@@ -697,6 +710,13 @@ align-items: center; */
     left: 7%;
     width: 85%;
     height: 85%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
 }
 
 #aboutus-holder .main-text-holder .text-holder div h3 {
@@ -711,6 +731,30 @@ align-items: center; */
     font-family: Roboto;
     line-height: 26px;
 }
+
+/* About Us text animation */
+#aboutus-holder .main-text-holder .text-holder .aboutus-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+#aboutus-holder .main-text-holder .text-holder .aboutus-text.active {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Road Map text animation */
+#aboutus-holder .main-text-holder .text-holder .roadmap-text.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Shop text animation */
+#aboutus-holder .main-text-holder .text-holder .shop-text.active {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 /* 3 Section text */
 /* About us */
