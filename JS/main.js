@@ -24,7 +24,6 @@ window.onload = function(e){
 }
 
 // Texts
-const mainTextHolder = document.querySelector('.text-holder') 
 const aboutUsHolder = document.querySelector('.aboutus-text') 
 const roadMapHolder = document.querySelector('.roadmap-text') 
 const shopHolder = document.querySelector('.shop-text')
@@ -37,21 +36,35 @@ const shopBubble = document.querySelector('#shop-bubble')
 // Click Event // Bubbles
 aboutUsBubble.addEventListener('click', function(e){
     aboutUsBubble.classList.remove('active')
+    aboutUsHolder.classList.remove('active')
     setTimeout((e) => {
+        roadMapHolder.classList.remove('active')
+        shopHolder.classList.remove('active')
         roadMapBubble.classList.remove('active')
+        shopBubble.classList.remove('active')
     }, 120);
 })
 
 roadMapBubble.addEventListener('click', function(e){
-    setTimeout((e) => {
-        aboutUsBubble.classList.add('active')
-    }, 120);
     roadMapBubble.classList.add('active')
+    roadMapHolder.classList.add('active')
+    setTimeout((e) => {
+        aboutUsHolder.classList.add('active')
+        aboutUsBubble.classList.add('active')
+        shopBubble.classList.remove('active')
+        shopHolder.classList.remove('active')
+    }, 120);
 })
 
-shopBubble.addEventListener('click', function(){
-    aboutUsBubble.classList.add('active')
-    roadMapBubble.classList.add('active')
+shopBubble.addEventListener('click', function(e){
+    shopBubble.classList.add('active')
+    shopHolder.classList.add('active')
+    setTimeout((e) => {
+        aboutUsHolder.classList.add('active')
+        aboutUsBubble.classList.add('active')
+        roadMapBubble.classList.remove('active')
+        roadMapHolder.classList.remove('active')
+    }, 120);
 })
 
 
