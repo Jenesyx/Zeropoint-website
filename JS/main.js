@@ -6,7 +6,7 @@ const textHolder = document.querySelector('.title-holder')
 let current;
 
 // Window load
-window.onload = function(e){
+window.onload = function (e) {
     var typed = new Typed('#typing', {
         strings:
             [
@@ -21,20 +21,31 @@ window.onload = function(e){
     });
 
     textHolder.classList.add('active')
+
+    // For Slick start
+    $('#demo1').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
+    });
+
 }
 
+
 // Texts
-const aboutUsHolder = document.querySelector('.aboutus-text') 
-const roadMapHolder = document.querySelector('.roadmap-text') 
+const aboutUsHolder = document.querySelector('.aboutus-text')
+const roadMapHolder = document.querySelector('.roadmap-text')
 const shopHolder = document.querySelector('.shop-text')
 
 // Bubbles
-const aboutUsBubble = document.querySelector('#aboutus-bubble') 
+const aboutUsBubble = document.querySelector('#aboutus-bubble')
 const roadMapBubble = document.querySelector('#roadmap-bubble')
-const shopBubble = document.querySelector('#shop-bubble') 
+const shopBubble = document.querySelector('#shop-bubble')
 
 // Click Event // Bubbles
-aboutUsBubble.addEventListener('click', function(e){
+aboutUsBubble.addEventListener('click', function (e) {
     aboutUsBubble.classList.remove('active')
     aboutUsHolder.classList.remove('active')
     setTimeout((e) => {
@@ -45,7 +56,7 @@ aboutUsBubble.addEventListener('click', function(e){
     }, 120);
 })
 
-roadMapBubble.addEventListener('click', function(e){
+roadMapBubble.addEventListener('click', function (e) {
     roadMapBubble.classList.add('active')
     roadMapHolder.classList.add('active')
     setTimeout((e) => {
@@ -56,7 +67,7 @@ roadMapBubble.addEventListener('click', function(e){
     }, 120);
 })
 
-shopBubble.addEventListener('click', function(e){
+shopBubble.addEventListener('click', function (e) {
     shopBubble.classList.add('active')
     shopHolder.classList.add('active')
     setTimeout((e) => {
@@ -69,28 +80,26 @@ shopBubble.addEventListener('click', function(e){
 
 
 // Window scroll
-window.addEventListener('scroll', ()=>{
-    
+window.addEventListener('scroll', () => {
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if(pageYOffset >= sectionTop - sectionHeight / 3)
-        {
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
             current = section.getAttribute('id')
         }
     })
-    
-    a.forEach(item =>{
+
+    a.forEach(item => {
         item.classList.remove('active');
-        if(item.classList.contains(current))
-        {
+        if (item.classList.contains(current)) {
             item.classList.add('active');
         }
     })
 
     const winScroll = window.pageYOffset;
     const height = document.documentElement.scrollHeight - window.innerHeight;
-    const scrolled = winScroll/height * 100; // You can change this!
-    progress.style.width = `${scrolled}%` 
+    const scrolled = winScroll / height * 100; // You can change this!
+    progress.style.width = `${scrolled}%`
 
 })

@@ -772,7 +772,28 @@ section {
 
 /* Shop Holder */
 #shop-holder {
-    /* background-color: green; */
+    position: relative;
+    background-color: green;
+}
+
+#shop-holder .text-holder {
+    background-color: red;
+}
+
+/* slick */
+#shop-holder #demo1 {
+    display: flex;
+}
+
+#shop-holder #demo1 .slide {
+    width: 350px;
+    height: 350px;
+    margin: 50px;
+}
+
+#shop-holder #demo1 .slide img {
+    width: 350px;
+    height: 350px;
 }
 
 /* Media screen 1540 - laptop 17inch */
