@@ -456,7 +456,7 @@ section {
     color: var(--text-color);
     width: 80px;
     height: 80px;
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
     background: rgba( 255, 255, 255, 0.15);
@@ -492,11 +492,11 @@ section {
 
 #aboutus-holder .Bubbles ul li svg {
     font-size: 28px;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
     filter: none;
     -webkit-filter: none;
 }
@@ -772,28 +772,124 @@ section {
 
 /* Shop Holder */
 #shop-holder {
-    position: relative;
-    background-color: green;
-}
-
-#shop-holder .text-holder {
-    background-color: red;
-}
-
-/* slick */
-#shop-holder #demo1 {
+    flex-direction: column;
+    justify-content: center; 
     display: flex;
+    position: relative;
+}   
+
+#shop-holder .holder {
+    flex-grow: 1;
 }
 
-#shop-holder #demo1 .slide {
-    width: 350px;
-    height: 350px;
-    margin: 50px;
+#shop-holder .slider-nav {
+    margin-top: 140px;
 }
 
-#shop-holder #demo1 .slide img {
-    width: 350px;
-    height: 350px;
+#shop-holder .slider-nav div {
+    padding: 9px;
+}
+
+#shop-holder h4 {
+    text-align: center;
+    font-size: 29px;
+    font-family: RobotoBold;
+    margin-top: 70px;
+}
+
+#shop-holder img {
+    width: 60%;
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.7);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+#shop-holder .button-holder {
+    display: flex;
+    margin-top: 120px;
+}
+
+#shop-holder .button-holder .btn {
+    width: 15%;
+}
+
+#shop-holder .button-holder .btn a{
+    padding: 11px 49px;
+    background: var(--light-green);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-size: 19px;
+    text-decoration: none;
+    border: 2px solid rgba(52, 73, 94, 0);
+    color: var(--main-green);
+    font-family: Roboto;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    position: relative;
+} #shop-holder .button-holder .btn a::before {
+    content: '';
+    position: absolute;
+    background: var(--dark-green);
+    top: 80%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -webkit-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -moz-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -ms-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -o-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    filter: blur(1.6em);
+    -webkit-filter: blur(1.6em);
+    opacity: 0.4;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    visibility: hidden;
+} #shop-holder .button-holder .btn a:hover {
+    color: #fff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.311);
+    background: none;
+    box-shadow: inset 0 0 0.5em 0 var(--light-green), 0 0 0.5em 0 var(--light-green);  
+    border: 2px solid var(--light-green);
+} #shop-holder .button-holder .btn a:hover::before {
+    content: '';
+    position: absolute;
+    background: var(--light-green);
+    top: 110%;
+    visibility: visible;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -webkit-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -moz-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -ms-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    -o-transform: perspective(2.7em) rotateX(40deg) scale(1, 0.40);
+    filter: blur(1.6em);
+    -webkit-filter: blur(1.6em);
+    opacity: .9;
+}
+
+#shop-holder .button-holder .btn a svg {
+    margin-right: 10px;
+}
+
+#shop-holder .button-holder p {
+    font-size: 19px;
+    font-family: Roboto;
+    margin-left: 20px;
 }
 
 /* Media screen 1540 - laptop 17inch */

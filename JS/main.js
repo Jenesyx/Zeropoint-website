@@ -22,15 +22,15 @@ window.onload = function (e) {
 
     textHolder.classList.add('active')
 
-    // For Slick start
-    $('#demo1').slick({
+    $('.slider-nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        dots: true,
         centerMode: true,
-        focusOnSelect: true
+        focusOnSelect: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
     });
-
+    
 }
 
 
