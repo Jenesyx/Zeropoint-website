@@ -8,7 +8,7 @@ let current;
 // Window load
 window.onload = function (e) {
     var typed = new Typed('#typing', {
-        strings:
+        strings: 
             [
                 "are ZeroPoint", "make it", "fix it",
                 "build it", "take it",

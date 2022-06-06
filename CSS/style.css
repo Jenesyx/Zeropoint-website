@@ -55,8 +55,8 @@ html {
 
 body {
     font-family: Roboto;
-    direction: ltr;
-    background: linear-gradient(to top, var(--second-dark), var(--main-green));
+    direction: ltr; 
+    background: linear-gradient(to top, var(--second-dark), var(--dark-green));
 }
 
 .container {
@@ -278,11 +278,20 @@ section {
 }
 
 /* Image One */
+#nfts-holder .nft-images {
+    width: 30%;
+    height: 70%;
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    z-index: 3;
+}
+
 #nfts-holder .img-holder-1 {
     z-index: 2;
     position: absolute;
-    right: 341px;
-    top: 220px;
+    top: 33%;
+    right: 75%;
     transform: rotate(25deg);
     -webkit-transform: rotate(25deg);
     -moz-transform: rotate(25deg);
@@ -305,8 +314,8 @@ section {
 #nfts-holder .img-holder-2 {
     z-index: 3;
     position: absolute;
-    right: 200px;
-    top: 500px;
+    right: 44%;
+    top: 74%;
 }
 
 #nfts-holder .img-holder-2 img {
@@ -786,8 +795,14 @@ section {
     position: relative;
 }
 
+#shop-holder .container {
+    width: 80%;
+    margin: auto;
+}
+
 #shop-holder .holder {
     flex-grow: 1;
+    width: 100%;
 }
 
 #shop-holder .slider-nav {
@@ -908,23 +923,31 @@ section {
 
 /* Team */
 #team-holder {
-    /* background-color: red; */
     position: relative;
 }
 
-#team-holder h5 {
+#team-holder .container {
+    width: 80%;
+}
+
+#team-holder .the-best {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    top: 20%;
+}
+
+#team-holder .the-best h5 {
     font-size: 500px;
     font-family: RobotoBold;
     opacity: 0.1;
     color: var(--text-dark);
     text-align: center;
-    position: absolute;
-    top: 25%;
 }
 
 #team-holder .top-team {
-    height: 70%;
-    /* background: beige; */
+    height: 50%;
 }
 
 #team-holder .profile-ul {
@@ -942,11 +965,9 @@ section {
     position: relative;
     height: 200px;
     width: 200px;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border: 2px solid rgb(255, 255, 255);
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
@@ -1019,9 +1040,9 @@ section {
 .profile .wrapper .title {
     font-size: 30px;
     color: #fff;
-    font-weight: bold;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0 10px 0;
+    font-family: RobotoBold;
 }
 
 .profile .wrapper .place {
@@ -1029,13 +1050,17 @@ section {
     font-size: 17px;
     margin: 1px 0;
     text-align: center;
+    font-family: Roboto;
+    cursor: default;
 }
 
 .profile .content {
     color: #e0e0e0;
     font-size: 17px;
     text-align: center;
-    margin: 20px 0;
+    margin: 2px 0;
+    font-family: Roboto;
+    cursor: default;
 }
 
 .profile .icon {
@@ -1085,7 +1110,9 @@ section {
     transition-delay: .4s;
 }
 
-/* Media screen 1540 - laptop 17inch */
+
+/******** Responsive ********/
+/* 17 Inch laptop */
 @media screen and (max-width: 1540px) {
     .container {
         width: 1100px;
@@ -1100,4 +1127,38 @@ section {
         right: 20px;
         top: 430px;
     }
+}
+
+/* 15 Inch laptop */
+@media only screen and (max-width: 1441px) {
+
+
+}
+
+/* 14 Inch laptop */
+@media only screen and (max-width: 1345px) {
+
+
+}
+
+/* 13 Inch laptop */
+@media only screen and (max-width: 1249px) {
+    
+}
+
+/* 12 Inch laptop */
+@media only screen and (max-width: 1153px) {
+
+   
+}
+
+/* Breakpoints For Tablets */
+@media screen and (max-width: 768px) {
+
+    
+}
+
+/* Breakpoints For Mobiles */
+@media screen and (max-width: 500px) {
+
 }
