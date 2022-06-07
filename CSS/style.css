@@ -1110,6 +1110,145 @@ section {
     transition-delay: .4s;
 }
 
+/* Footer */
+#footer {
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.311);
+    min-height: 550px;
+}
+
+/* Main objects styles */
+#footer .object-holder {
+    align-items: center;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+
+#footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .object-holder .object {
+    width: 45%;
+}
+
+/* Left styles */
+#footer .object-holder .left-objects {
+    margin-top: 90px;
+}
+
+#footer .object-holder .left-objects img {
+    margin-left: 15px;
+    width: 13%;
+}
+
+#footer .object-holder .left-objects P {
+    padding: 20px;
+    color: var(--text-color);
+    width: 50%;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+#footer .object-holder .left-objects ul {
+    display: flex;
+    list-style: none;
+    margin-left: 9%;
+}
+
+#footer .object-holder .left-objects ul li {
+    margin-left: 20px;
+}
+
+/* Icons styles */
+#footer .object-holder .left-objects ul li a {
+    position: relative;
+    color: var(--text-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 3px 3px 30px 0 rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#footer .object-holder .left-objects ul li a::before {
+    content: '';
+    position: absolute;
+    background: var(--light-green);
+    top: 10%;
+    visibility: visible;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    transform: perspective(3em) rotateX(40deg) scale(1, 0.40);
+    -webkit-transform: perspective(3em) rotateX(40deg) scale(1, 0.40);
+    -moz-transform: perspective(3em) rotateX(40deg) scale(1, 0.40);
+    -ms-transform: perspective(3em) rotateX(40deg) scale(1, 0.40);
+    -o-transform: perspective(3em) rotateX(40deg) scale(1, 0.40);
+    filter: blur(1.6em);
+    -webkit-filter: blur(1.6em);
+    opacity: .1;
+    visibility: hidden;
+    transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+}
+#footer .object-holder .left-objects ul li a:hover::before {
+    content: '';
+    position: absolute;
+    background: var(--light-green);
+    top: 10%;
+    visibility: visible;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    transform: perspective(3em) rotateX(200deg) scale(1, 0.40);
+    -webkit-transform: perspective(3em) rotateX(200deg) scale(1, 0.40);
+    -moz-transform: perspective(3em) rotateX(200deg) scale(1, 0.40);
+    -ms-transform: perspective(3em) rotateX(200deg) scale(1, 0.40);
+    -o-transform: perspective(3em) rotateX(200deg) scale(1, 0.40);
+    filter: blur(1.6em);
+    -webkit-filter: blur(1.6em);
+    opacity: .9;
+}
+
+#footer .object-holder .left-objects ul li svg {
+    position: relative;
+    color: var(--text-color);
+    font-size: 21px;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+#footer .object-holder .left-objects ul li a:hover svg {
+    color: var(--light-blue);
+}
+
+/* Designed by */
+#footer .designed-by {
+    position: absolute;
+    bottom: 0;
+    left: 43%;
+}
+
+
+
 
 /******** Responsive ********/
 /* 17 Inch laptop */
