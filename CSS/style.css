@@ -385,7 +385,6 @@ section {
 #aboutus-holder .container {
   justify-content: space-between;
   display: flex;
-  height: 100%;
 }
 
 /* Left Section */
@@ -580,7 +579,7 @@ section {
 
 /* General Right Section Style */
 #aboutus-holder .main-text-holder .text-holder div {
-  position: absolute;
+  position: relative;
   top: 7%;
   left: 7%;
   width: 85%;
@@ -644,13 +643,10 @@ section {
 #shop-holder {
   flex-direction: column;
   justify-content: center;
-  display: flex;
-  position: relative;
 }
 
 #shop-holder .container {
-  width: 80%;
-  margin: auto;
+  width: 1600px;
 }
 
 #shop-holder .holder {
@@ -660,6 +656,7 @@ section {
 
 #shop-holder .slider-nav {
   margin-top: 140px;
+  width: 100%;
 }
 
 #shop-holder .slider-nav div {
@@ -911,7 +908,7 @@ section {
   position: relative;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.311);
-  min-height: 550px;
+  height: 550px;
 }
 
 /* Main objects styles */
@@ -1015,11 +1012,58 @@ section {
   color: var(--light-blue);
 }
 
+#footer .right-objects input {
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 20px;
+  width: 529px;
+  height: 52px;
+  font-size: 18px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+#footer .right-objects svg {
+  color: var(--text-color);
+  font-size: 23px;
+  position: relative;
+  left: 46px;
+  top: 3px;
+  z-index: 99;
+}
+
 /* Designed by */
 #footer .designed-by {
   position: absolute;
   bottom: 0;
-  left: 43%;
+  left: 38%;
+  color: var(--text-color);
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(5px);
+  /* border: 1px solid var(--text-color); */
+  border-top: 1px solid rgb(255, 255, 255);
+  border-left: 1px solid rgb(255, 255, 255);
+  border-right: 1px solid rgb(255, 255, 255);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 8px 8px 0 0 ;
+  width: 500px;
+  height: 40px;
+  text-align: center;
+}
+
+#footer .designed-by p {
+  margin: 13px auto;
+}
+
+#footer .designed-by .fa-heart {
+  color: #FF005F;
+}
+
+#footer .designed-by .fa-mug-saucer {
+  color: #874E05;
 }
 
 /******** Responsive ********/
@@ -1057,9 +1101,9 @@ section {
 }
 
 /* Breakpoints For Tablets */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 }
 
 /* Breakpoints For Mobiles */
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
 }
