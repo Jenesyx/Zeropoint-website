@@ -1,6 +1,7 @@
 /* Import reset.css */
 @import "../CSS/reset.css";
 
+/* Font */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 /* Fonts */
@@ -66,7 +67,7 @@ body {
   margin: auto;
 }
 
-/* Header */
+/***** Header *****/
 header {
   height: 70px;
   position: sticky;
@@ -192,7 +193,8 @@ section {
 
 /*****************************! Sections !******************************/
 
-/* Welcomer section */
+
+/************* Welcomer section Style *************/
 #welcomer-holder {
   background-image: url("../Images/mainpattern2.png");
   background-size: cover;
@@ -238,7 +240,8 @@ section {
   width: 100%;
 }
 
-/* NFT's Section */
+
+/************* NFT's Section Style *************/
 #nfts-holder {
   justify-content: center;
   align-items: center;
@@ -374,7 +377,8 @@ section {
   opacity: 0.9;
 }
 
-/* About us Holder */
+
+/************* About us Holder Style *************/
 #aboutus-holder {
   align-items: center;
   margin: auto;
@@ -387,7 +391,7 @@ section {
   display: flex;
 }
 
-/* Left Section */
+/**** Left Section styles ****/
 #aboutus-holder .Bubbles {
   width: 40%;
 }
@@ -402,8 +406,8 @@ section {
   margin-top: 170px;
 }
 
-/* The Bubbles */
-/* General Bubbles */
+/*** The Bubbles ***/
+/** General Bubbles **/
 #aboutus-holder .Bubbles ul li {
   text-decoration: none;
   color: var(--text-color);
@@ -448,7 +452,7 @@ section {
   filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.5));
 }
 
-/* About Us Bubble */
+/** About Us Bubble **/
 #aboutus-holder .Bubbles ul #aboutus-bubble {
   justify-content: left;
   width: 250px;
@@ -491,7 +495,7 @@ section {
   font-size: 28px;
 }
 
-/* Road Map Section */
+/** Road Map Section **/
 #aboutus-holder .Bubbles ul #roadmap-bubble.active {
   justify-content: left;
   width: 250px;
@@ -513,7 +517,7 @@ section {
   font-size: 35px;
 }
 
-/* Shop Section */
+/** Shop Section **/
 #aboutus-holder .Bubbles ul #shop-bubble.active {
   justify-content: left;
   width: 250px;
@@ -558,7 +562,7 @@ section {
   }
 }
 
-/* Right Section */
+/**** Right Section ****/
 #aboutus-holder .main-text-holder {
   width: 55%;
   height: 950px;
@@ -639,7 +643,8 @@ section {
 #aboutus-holder .main-text-holder .text-holder .shop-text {
 }
 
-/* Shop Holder */
+
+/************* Shop Holder Style *************/
 #shop-holder {
   flex-direction: column;
   justify-content: center;
@@ -747,7 +752,7 @@ section {
   margin-left: 20px;
 }
 
-/* Team */
+/************* Team Holder Style *************/
 #team-holder {
   position: relative;
 }
@@ -756,6 +761,7 @@ section {
   width: 80%;
 }
 
+/** Background text **/
 #team-holder .the-best {
   width: 100%;
   height: 100%;
@@ -788,6 +794,8 @@ section {
   margin: 70px;
 }
 
+/**** Bubbles Styles ****/
+/* Circle close */
 .profile {
   position: relative;
   height: 200px;
@@ -801,6 +809,7 @@ section {
   transition: all 0.5s ease;
 }
 
+/* Circle open */
 .profile:hover {
   width: 399px;
   height: 408px;
@@ -808,6 +817,7 @@ section {
   border-radius: 50px;
 }
 
+/* Image */
 .profile .wrapper img {
   width: 180px;
   height: 180px;
@@ -818,7 +828,6 @@ section {
   object-fit: cover;
   transition: all 0.9 ease-in-out;
 }
-
 .profile:hover img {
   margin: auto;
   margin-top: 40px;
@@ -826,14 +835,7 @@ section {
   transition: all 0.4s ease-in-out;
 }
 
-.profile:hover .wrapper img.active {
-  width: 350px;
-  height: 470px;
-  border: none;
-  margin: 0 auto;
-  border-radius: 5px;
-}
-
+/*** In Wrapper objects style ***/
 .profile .wrapper .title {
   font-size: 30px;
   color: #fff;
@@ -886,6 +888,7 @@ section {
   display: none;
 }
 
+/* Icons */
 .profile .icon li svg {
   font-size: 25px;
   color: var(--text-color);
@@ -903,42 +906,38 @@ section {
   transition-delay: 0.4s;
 }
 
-/* Footer */
+/************* Footer *************/
 #footer {
   position: relative;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.311);
-  height: 550px;
+  height: 100%;
 }
 
-/* Main objects styles */
-#footer .object-holder {
+/*** Main objects styles ***/
+#footer .objects-holder {
   align-items: center;
   margin: auto;
   display: flex;
   position: relative;
+  height: 500px;
 }
 
-#footer .container {
-  display: flex;
-  justify-content: space-between;
-}
-
-#footer .object-holder .object {
+#footer .objects-holder .object {
   width: 45%;
 }
 
 /* Left styles */
-#footer .object-holder .left-objects {
+#footer .objects-holder .left-objects {
   margin-top: 90px;
 }
 
-#footer .object-holder .left-objects img {
+#footer .objects-holder .left-objects img {
   margin-left: 15px;
   width: 13%;
 }
 
-#footer .object-holder .left-objects P {
+#footer .objects-holder .left-objects P {
   padding: 20px;
   color: var(--text-color);
   width: 50%;
@@ -946,18 +945,18 @@ section {
   line-height: 22px;
 }
 
-#footer .object-holder .left-objects ul {
+#footer .objects-holder .left-objects ul {
   display: flex;
   list-style: none;
   margin-left: 9%;
 }
 
-#footer .object-holder .left-objects ul li {
+#footer .objects-holder .left-objects ul li {
   margin-left: 20px;
 }
 
 /* Icons styles */
-#footer .object-holder .left-objects ul li a {
+#footer .objects-holder .left-objects ul li a {
   position: relative;
   color: var(--text-color);
   width: 40px;
@@ -971,7 +970,7 @@ section {
   border: 1px solid rgb(255, 255, 255);
   border-radius: 50%;
 }
-#footer .object-holder .left-objects ul li a::before {
+#footer .objects-holder .left-objects ul li a::before {
   content: "";
   position: absolute;
   background: var(--light-green);
@@ -986,7 +985,7 @@ section {
   visibility: hidden;
   transition: all 0.6s ease-in-out;
 }
-#footer .object-holder .left-objects ul li a:hover::before {
+#footer .objects-holder .left-objects ul li a:hover::before {
   content: "";
   position: absolute;
   background: var(--light-green);
@@ -1001,29 +1000,36 @@ section {
   opacity: 0.9;
 }
 
-#footer .object-holder .left-objects ul li svg {
+#footer .objects-holder .left-objects ul li svg {
   position: relative;
   color: var(--text-color);
   font-size: 21px;
   transition: all 0.4s ease-in-out;
 }
 
-#footer .object-holder .left-objects ul li a:hover svg {
+#footer .objects-holder .left-objects ul li a:hover svg {
   color: var(--light-blue);
 }
 
-#footer .right-objects input {
+/* Right Styles */
+#footer .right-objects input {  
   background: rgba(255, 255, 255, 0.13);
   backdrop-filter: blur(5px);
   border: 1px solid rgb(255, 255, 255);
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
-  padding: 20px;
-  width: 529px;
+  padding: 20px 20px 20px 55px;
+  width: 80%;
   height: 52px;
   font-size: 18px;
   text-align: center;
   color: var(--text-color);
+  box-shadow: inset 110px 0px 60px -70px #026667;
+  transition: box-shadow 0.5s ease-in-out;
+} #footer .right-objects input:hover {
+  box-shadow: inset 160px 0px 70px -70px #026667;
+} #footer .right-objects input:focus {
+  box-shadow: inset 230px 0px 90px -70px #026667;
 }
 
 #footer .right-objects svg {
@@ -1035,22 +1041,19 @@ section {
   z-index: 99;
 }
 
-/* Designed by */
+/*** Designed by ***/
 #footer .designed-by {
-  position: absolute;
-  bottom: 0;
-  left: 38%;
+  width: 40%;
+  height: 40px;
   color: var(--text-color);
   background: rgba(255, 255, 255, 0.13);
   backdrop-filter: blur(5px);
-  /* border: 1px solid var(--text-color); */
   border-top: 1px solid rgb(255, 255, 255);
   border-left: 1px solid rgb(255, 255, 255);
   border-right: 1px solid rgb(255, 255, 255);
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
   border-radius: 8px 8px 0 0 ;
-  width: 500px;
-  height: 40px;
+  margin: auto;
   text-align: center;
 }
 
