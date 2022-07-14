@@ -3,6 +3,7 @@ const a = document.querySelectorAll('.container nav ul li a');
 const progress = document.querySelector('.progress-bar');
 const welcomer = document.getElementById('welcomer-holder')
 const textHolder = document.querySelector('.title-holder')
+const items = document.querySelectorAll('.on-scroll')
 let current;
 
 // Window load
@@ -31,6 +32,27 @@ window.onload = function (e) {
         autoplaySpeed: 2000,
     });
     
+    function IsElementInViewPort(el){
+        let rect = el.getBoundingClientRect()
+
+        return(
+            rect.top >= 0 &&
+            rect.right >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.left <= (window.innerWidth || document.documentElement.clientWidth) 
+        );
+    }
+
+    function callBackFunction(){
+        for (let i = 0; i < items.length; i++) {
+            if(IsElementInViewPort(items[i])){
+                items[i].classList.add('in-view')
+            }
+        }
+    }
+
+    window.addEventListener('scroll', callBackFunction)
+    window.addEventListener('load', callBackFunction)
 }
 
 
@@ -100,6 +122,7 @@ window.addEventListener('scroll', () => {
     const winScroll = window.pageYOffset;
     const height = document.documentElement.scrollHeight - window.innerHeight;
     const scrolled = winScroll / height * 100; // You can change this!
-    progress.style.width = `${scrolled}%`
+    progress.style.width = `${scrolled}%`;
+
 
 })

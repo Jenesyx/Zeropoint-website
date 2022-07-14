@@ -67,6 +67,22 @@ body {
   margin: auto;
 }
 
+/* Scroll Animation */
+.on-scroll {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  transition-delay: 0.2s; 
+  transform: translateY(80px);
+  position: relative;
+}
+
+.on-scroll.in-view {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /***** Header *****/
 header {
   height: 70px;
@@ -274,7 +290,6 @@ section {
 
 #nfts-holder .img-holder-1 img {
   border-radius: 40px;
-
   object-fit: cover;
   width: 333px;
   height: 333px;
@@ -292,7 +307,6 @@ section {
   width: 288px;
   height: 288px;
   border-radius: 40px;
-
   object-fit: cover;
 }
 
@@ -305,7 +319,6 @@ section {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(28px);
-
   border: 1px solid var(--text-color);
   border-radius: 50px;
 }
@@ -583,7 +596,7 @@ section {
 
 /* General Right Section Style */
 #aboutus-holder .main-text-holder .text-holder div {
-  position: relative;
+  position: absolute;
   top: 7%;
   left: 7%;
   width: 85%;
@@ -591,6 +604,7 @@ section {
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 #aboutus-holder .main-text-holder .text-holder div h3 {
@@ -657,11 +671,14 @@ section {
 #shop-holder .holder {
   flex-grow: 1;
   width: 100%;
+  align-items: center;
 }
 
 #shop-holder .slider-nav {
   margin-top: 140px;
   width: 100%;
+  height: 50%;
+  justify-content: center;
 }
 
 #shop-holder .slider-nav div {
@@ -673,7 +690,7 @@ section {
   font-size: 29px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  margin-top: 70px;
+  margin-top: 2rem;
 }
 
 #shop-holder img {
@@ -764,14 +781,16 @@ section {
 /** Background text **/
 #team-holder .the-best {
   width: 100%;
-  height: 100%;
+  height: 60%;
   position: absolute;
   left: 0%;
   top: 20%;
+  justify-content: center;
+  align-items: center;
 }
 
-#team-holder .the-best h5 {
-  font-size: 500px;
+#team-holder h5 {
+  font-size: 30rem;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   opacity: 0.1;
@@ -1085,26 +1104,113 @@ section {
     right: 20px;
     top: 430px;
   }
+  
+  /************* Shop Holder Style *************/
+  #shop-holder .container {
+    width: 1400px;
+  }
+
+  #shop-holder .slider-nav div {
+    padding: 4px;
+  }
+
+  #shop-holder h4 {
+    margin-top: 1px;
+  }
+
+  #shop-holder img {
+    width: 70%;
+  }
 }
 
 /* 15 Inch laptop */
 @media only screen and (max-width: 1441px) {
+  #shop-holder .container {
+    width: 1300px;
+  }
+  /* Teams */ 
+  #team-holder h5 {
+    font-size: 25rem;
+  }
 }
 
 /* 14 Inch laptop */
 @media only screen and (max-width: 1345px) {
+  #shop-holder .container {
+    width: 1100px;
+  }
+  #shop-holder img {
+    width: 80%;
+  }
+
+  #team-holder .container {
+    width: 100%;
+  }
+
+  /* Teams */ 
+  #team-holder h5 {
+    font-size: 25rem;
+  }
+  
+  #shop-holder .button-holder .btn {
+    width: 20%;
+  }
 }
 
 /* 13 Inch laptop */
 @media only screen and (max-width: 1249px) {
+  #shop-holder .container {
+    width: 1050px;
+  }
+  #team-holder h5 {
+    font-size: 22rem;
+  }
+  #shop-holder .button-holder .btn {
+    width: 20%;
+  }
+
+  #team-holder .container {
+    width: 100%;
+  }
+  
+  .profile {
+    height: 170px;
+    width: 170px;
+  }
+  
+  .profile:hover {
+    width: 349px;
+    height: 358px;
+  }
+  
+  .profile .wrapper img {
+    width: 150px;
+    height: 150px;
+  }
+  .profile:hover img {
+    margin-top: 40px;
+  }
 }
 
 /* 12 Inch laptop */
 @media only screen and (max-width: 1153px) {
+  #shop-holder .container {
+    width: 1000px;
+  }
+  #team-holder h5 {
+    font-size: 20rem;
+  }
+  #shop-holder .button-holder .btn {
+    width: 20%;
+  }
 }
 
 /* Breakpoints For Tablets */
 @media only screen and (max-width: 768px) {
+  .container {
+    width: 900px;
+    margin: auto;
+  }
 }
 
 /* Breakpoints For Mobiles */
