@@ -72,7 +72,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease;
-  transition-delay: 0.2s; 
+  transition-delay: 0.2s;
   transform: translateY(80px);
   position: relative;
 }
@@ -96,6 +96,56 @@ header {
 header .container {
   margin: 0 auto;
   height: 100%;
+}
+
+header .nav-toggle {
+  position: absolute;
+  right: 150px;
+  top: 25px;
+  width: 45px;
+  height: 45px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+
+.head {
+  display: none;
+}
+
+header .nav-toggle span {
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+
+header .nav-toggle span::before,
+header .nav-toggle span::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+header .nav-toggle span::before {
+  top: -8px;
+}
+
+header .nav-toggle span::after {
+  top: 8px;
 }
 
 header #nav {
@@ -207,8 +257,30 @@ section {
   color: var(--text-color);
 }
 
-/*****************************! Sections !******************************/
+.nav-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+}
 
+.nav-overlay.show {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+/*****************************! Sections !******************************/
 
 /************* Welcomer section Style *************/
 #welcomer-holder {
@@ -255,7 +327,6 @@ section {
   border-top: 0.2rem solid var(--text-color);
   width: 100%;
 }
-
 
 /************* NFT's Section Style *************/
 #nfts-holder {
@@ -389,7 +460,6 @@ section {
   filter: blur(1.6em);
   opacity: 0.9;
 }
-
 
 /************* About us Holder Style *************/
 #aboutus-holder {
@@ -604,7 +674,6 @@ section {
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s ease-in-out;
-  overflow: hidden;
 }
 
 #aboutus-holder .main-text-holder .text-holder div h3 {
@@ -618,6 +687,7 @@ section {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   line-height: 26px;
+  text-overflow: ellipsis;
 }
 
 /* About Us text animation */
@@ -656,7 +726,6 @@ section {
 /* Shop */
 #aboutus-holder .main-text-holder .text-holder .shop-text {
 }
-
 
 /************* Shop Holder Style *************/
 #shop-holder {
@@ -1031,7 +1100,7 @@ section {
 }
 
 /* Right Styles */
-#footer .right-objects input {  
+#footer .right-objects input {
   background: rgba(255, 255, 255, 0.13);
   backdrop-filter: blur(5px);
   border: 1px solid rgb(255, 255, 255);
@@ -1045,9 +1114,11 @@ section {
   color: var(--text-color);
   box-shadow: inset 110px 0px 60px -70px #026667;
   transition: box-shadow 0.5s ease-in-out;
-} #footer .right-objects input:hover {
+}
+#footer .right-objects input:hover {
   box-shadow: inset 160px 0px 70px -70px #026667;
-} #footer .right-objects input:focus {
+}
+#footer .right-objects input:focus {
   box-shadow: inset 230px 0px 90px -70px #026667;
 }
 
@@ -1071,7 +1142,7 @@ section {
   border-left: 1px solid rgb(255, 255, 255);
   border-right: 1px solid rgb(255, 255, 255);
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
-  border-radius: 8px 8px 0 0 ;
+  border-radius: 8px 8px 0 0;
   margin: auto;
   text-align: center;
 }
@@ -1081,15 +1152,21 @@ section {
 }
 
 #footer .designed-by .fa-heart {
-  color: #FF005F;
+  color: #ff005f;
 }
 
 #footer .designed-by .fa-mug-saucer {
-  color: #874E05;
+  color: #874e05;
 }
 
 /******** Responsive ********/
 /* 17 Inch laptop */
+@media screen and (max-width: 1666px) {
+  #shop-holder .container {
+    width: 1400px;
+  }
+}
+
 @media screen and (max-width: 1540px) {
   .container {
     width: 1100px;
@@ -1104,10 +1181,14 @@ section {
     right: 20px;
     top: 430px;
   }
-  
-  /************* Shop Holder Style *************/
+
+  #aboutus-holder .main-text-holder .text-holder div p {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
   #shop-holder .container {
-    width: 1400px;
+    width: 1370px;
   }
 
   #shop-holder .slider-nav div {
@@ -1121,14 +1202,18 @@ section {
   #shop-holder img {
     width: 70%;
   }
+
+  #team-holder h5 {
+    font-size: 28rem;
+  }
 }
 
 /* 15 Inch laptop */
 @media only screen and (max-width: 1441px) {
   #shop-holder .container {
-    width: 1300px;
+    width: 1200px;
   }
-  /* Teams */ 
+  /* Teams */
   #team-holder h5 {
     font-size: 25rem;
   }
@@ -1147,11 +1232,11 @@ section {
     width: 100%;
   }
 
-  /* Teams */ 
+  /* Teams */
   #team-holder h5 {
     font-size: 25rem;
   }
-  
+
   #shop-holder .button-holder .btn {
     width: 20%;
   }
@@ -1172,17 +1257,17 @@ section {
   #team-holder .container {
     width: 100%;
   }
-  
+
   .profile {
     height: 170px;
     width: 170px;
   }
-  
+
   .profile:hover {
     width: 349px;
     height: 358px;
   }
-  
+
   .profile .wrapper img {
     width: 150px;
     height: 150px;
@@ -1190,12 +1275,32 @@ section {
   .profile:hover img {
     margin-top: 40px;
   }
+
+  #footer .right-objects input {
+    width: 70%;
+    height: 42px;
+    font-size: 15px;
+  }
+
+  #footer .right-objects svg {
+    font-size: 20px;
+  }
+
+  #footer .objects-holder .left-objects P {
+    font-size: 14px;
+  }
 }
 
 /* 12 Inch laptop */
 @media only screen and (max-width: 1153px) {
-  #shop-holder .container {
+  .container {
     width: 1000px;
+  }
+  #aboutus-holder .main-text-holder .text-holder div p {
+    font-size: 13px;
+  }
+  #shop-holder .container {
+    width: 990px;
   }
   #team-holder h5 {
     font-size: 20rem;
@@ -1203,6 +1308,14 @@ section {
   #shop-holder .button-holder .btn {
     width: 20%;
   }
+
+
+  header #nav .logo {
+    display: none;
+    visibility: hidden;
+  }
+
+
 }
 
 /* Breakpoints For Tablets */
@@ -1210,6 +1323,93 @@ section {
   .container {
     width: 900px;
     margin: auto;
+  }
+
+  header {
+    background-color: rgba(0, 0, 0, 0) !important;
+    width: 0;
+    height: 0;
+  }
+
+  nav {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px !important;
+    height: 100%;
+    background: #111;
+    z-index: 1000;
+    transform: translateX(0);
+    transition: all 0.3s ease;
+  }
+  nav.open {
+    transform: translateX(0);
+  }
+
+  nav .head strong{
+    font-size: 16px;
+  }
+
+  nav .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #d5d5d5;
+    flex-direction: row-reverse;
+    padding: 10px 20px;
+    border-bottom: 1px solid #333;
+  
+  }
+
+  nav .head .close svg{
+    font-size: 22px;
+    cursor: pointer ;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 10px 0;
+    display: block !important;
+  }
+
+  nav ul li {
+    margin-top: 10px;
+    display: block;
+  }
+
+  nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 15px;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+  }
+
+  nav li a:hover::before {
+    width: 100%;
+  }
+
+  nav li a:hover {
+    color: #000 !important;
   }
 }
 
