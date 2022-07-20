@@ -4,6 +4,10 @@ const progress = document.querySelector('.progress-bar');
 const welcomer = document.getElementById('welcomer-holder')
 const textHolder = document.querySelector('.title-holder')
 const items = document.querySelectorAll('.on-scroll')
+const navToggle = document.querySelector('.nav-toggle')
+const nav = document.querySelector('nav')
+const overlay = document.querySelector('.nav-overlay')
+const close = document.querySelector('.close')
 let current;
 
 // Window load
@@ -126,3 +130,28 @@ window.addEventListener('scroll', () => {
 
 
 })
+
+navToggle.addEventListener('click', function(){
+    navShow()
+})
+
+close.addEventListener('click', function(){
+    navHide()
+})
+
+overlay.addEventListener('click', function(){
+    navHide()
+})
+
+function navShow(){
+    overlay.style.transition = "all 0.5s ease"
+    overlay.classList.add('show')
+    nav.style.transition = "all 0.3s ease 0.5s"
+    nav.classList.add('open')
+}
+function navHide(){
+    nav.style.transition = "all 0.3s ease"
+    overlay.style.transition = "all 0.3s ease 0.5s"
+    overlay.classList.remove('show')
+    nav.classList.remove('open')
+}
